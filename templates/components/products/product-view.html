@@ -261,13 +261,13 @@
         {{> components/common/share url=product.url}}
     </section>
 
-    <article class="productView-description">
-        {{#if theme_settings.show_product_details_tabs}}
-            {{> components/products/description-tabs}}
-        {{else}}
-            {{> components/products/description}}
-        {{/if}}
-    </article>
+        <article class="productView-description">
+            {{#if theme_settings.show_product_details_tabs}}
+                {{> components/products/description-tabs}}
+            {{else}}
+                {{> components/products/description}}
+            {{/if}}
+        </article>
 </div>
 
 <div id="previewModal" class="modal modal--large" data-reveal>
@@ -275,3 +275,4 @@
     <div class="modal-content"></div>
     <div class="loadingOverlay"></div>
 </div>
+

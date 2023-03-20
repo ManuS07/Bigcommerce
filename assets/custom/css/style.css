@@ -463,7 +463,7 @@ img {
 #aa-header .aa-header-bottom .aa-cartbox .aa-cart-link .aa-cart-notify {
   background-color: #fff;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   padding: 2px 9px;
   position: absolute;
@@ -1762,7 +1762,6 @@ img {
   width: 100%;
 }
 #aa-catg-head-banner .aa-catg-head-banner-area {
-  background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   left: 0;
   position: absolute;
@@ -2065,10 +2064,10 @@ img {
   display: inline;
   float: left;
   text-align: center;
+  font-size: 12pt;
   width: 100%;
 }
 #aa-product-category .aa-product-catg-content .aa-product-catg-pagination .pagination {
-  border: 1px solid #ccc;
   border-radius: 0;
 }
 #aa-product-category .aa-product-catg-content .aa-product-catg-pagination .pagination li:first-child a, #aa-product-category .aa-product-catg-content .aa-product-catg-pagination .pagination li:first-child span {

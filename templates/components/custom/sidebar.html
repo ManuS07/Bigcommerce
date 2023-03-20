@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
+        <aside class="aa-sidebar">
+          <!-- single sidebar -->
+          <div class="aa-sidebar-widget">
+            <h3>Category</h3>
+            <ul >
+              {{#each categories}}
+                  <li>
+                  {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                      {{> components/common/navigation-list}}
+                  {{/if}}
+                  {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                      {{> components/common/navigation-list-alternate}}
+                  {{/if}}
+                  </li>
+              {{/each}}
+            
+          </ul>
+          </div>
+          <!-- single sidebar -->
+          <div class="aa-sidebar-widget">
+            <h3>Tags</h3>
+            <div class="tag-cloud">
+              <a href="#">Fashion</a>
+              <a href="#">Ecommerce</a>
+              <a href="#">Shop</a>
+              <a href="#">Hand Bag</a>
+              <a href="#">Laptop</a>
+              <a href="#">Head Phone</a>
+              <a href="#">Pen Drive</a>
+            </div>
+          </div>
+          <!-- single sidebar -->
+          <div class="aa-sidebar-widget">
+            <h3>Shop By Price</h3>              
+            <!-- price range -->
+            <div class="aa-sidebar-price-range">
+             <form action="">
+                <div id="skipstep" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                </div>
+                <span id="skip-value-lower" class="example-val">30.00</span>
+               <span id="skip-value-upper" class="example-val">100.00</span>
+               <button class="aa-filter-btn" type="submit">Filter</button>
+             </form>
+            </div>              
+
+          </div>
+          <!-- single sidebar -->
+          <div class="aa-sidebar-widget">
+            <h3>Shop By Color</h3>
+            <div class="aa-color-tag">
+              <a class="aa-color-green" href="#"></a>
+              <a class="aa-color-yellow" href="#"></a>
+              <a class="aa-color-pink" href="#"></a>
+              <a class="aa-color-purple" href="#"></a>
+              <a class="aa-color-blue" href="#"></a>
+              <a class="aa-color-orange" href="#"></a>
+              <a class="aa-color-gray" href="#"></a>
+              <a class="aa-color-black" href="#"></a>
+              <a class="aa-color-white" href="#"></a>
+              <a class="aa-color-cyan" href="#"></a>
+              <a class="aa-color-olive" href="#"></a>
+              <a class="aa-color-orchid" href="#"></a>
+            </div>                            
+          </div>
+            <!-- single sidebar -->
+            <div class="aa-sidebar-widget">
+              <h3>Recently Views</h3>
+              <div class="aa-recently-views">
+                <ul>
+                  {{#each products.top_sellers}}
+
+                  <li>
+                    <a href="#" class="aa-cartbox-img"><img alt="img" src="{{getImageSrcset image 1x=(default fallback_size '160w')}}" alt="{{image.alt}}" title="{{image.alt}}"></a>
+                    <div class="aa-cartbox-info">
+                      <h4><a href="#" data-test-info-type="brandName">{{brand.name}}{{name}}</a></h4>
+                       {{> components/products/price price=price}}
+                    </div>                    
+                  </li>
+                   {{/each}}                               
+                </ul>
+                
+              </div>                            
+            </div>
+            <!-- single sidebar -->
+          <div class="aa-sidebar-widget">
+            <h3>New Products</h3>
+            <div class="aa-recently-views">
+              <ul>
+                {{#each products.new}}
+                <li >
+                  <a href="#" class="aa-cartbox-img"><img alt="img" src="{{getImageSrcset image 1x=(default fallback_size '160w')}}" alt="{{image.alt}}" title="{{image.alt}}"></a>
+                  <div class="aa-cartbox-info">
+                    <h4><a href="#" data-test-info-type="brandName">{{brand.name}}{{name}}</a></h4>
+                     {{> components/products/price price=price}}
+                  </div>                   
+                </li>
+                {{/each}}                                   
+              </ul>
+            </div>                            
+          </div>
+        </aside>
+      </div>
+</body>
+</html>

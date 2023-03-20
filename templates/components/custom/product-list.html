@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <!-- product category -->
+ <section id="aa-product-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3">
+          <div class="aa-product-catg-content">
+            <div class="aa-product-catg-head">
+              <div class="aa-product-catg-head-left">
+                
+                  {{> components/products/filter sort=pagination.category.sort}}  
+
+              </div>
+              <div class="aa-product-catg-head-right">
+                <a id="grid-catg" href="#"><span class="fa fa-th"></span></a>
+                <a id="list-catg" href="#"><span class="fa fa-list"></span></a>
+              </div>
+            </div>
+            <div class="aa-product-catg-body">
+              {{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+                {{>components/category/product-listing }}                                     
+              
+              <div class="aa-product-catg-pagination">
+                
+                  
+                <nav>
+                  <ul class="pagination">
+                    <li>
+                      <a href="{{pagination.category.previous}}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="{{pagination.category.next}}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>  
+                   
+              
+          
+          </div>
+        </div>
+      </div>
+              
+            </div>
+         
+      {{>components/custom/sidebar}}
+       
+      </div>
+    </div>
+  </section>
+  <!-- / product category -->
+</body>
+</html>

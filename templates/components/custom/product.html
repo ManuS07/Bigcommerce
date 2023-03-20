@@ -27,33 +27,7 @@
                         <!-- start single product item -->
                         {{#each products.top_sellers }}
 
-                        <li {{#if alternate}} card--alternate{{/if}}"
-                        data-test="card-{{id}}"
-                        {{#if settings.data_tag_enabled}}
-                            data-event-type="{{event}}"
-                            data-entity-id="{{id}}"
-                            data-position="{{position}}"
-                            data-name="{{name}}"
-                            data-product-category="
-                            {{#each category}}
-                                {{#if @last}}
-                                    {{this}}
-                                {{else}}
-                                    {{this}},
-                                {{/if}}
-                            {{/each}}"
-                            data-product-brand="{{brand.name}}"
-                            data-product-price="
-                            {{#or customer (unless settings.hide_price_from_guests)}}
-                                {{#if price.with_tax}}
-                                    {{price.with_tax.value}}
-                                {{else}}
-                                    {{price.without_tax.value}}
-                                {{/if}}
-                            {{else}}
-                                {{lang 'common.login_for_pricing'}}
-                            {{/or}}"
-                        {{/if}}>
+                        <li>
                           <figure >
                             <a class="aa-product-img" href="#"><img src="{{getImageSrcset image 1x=(default fallback_size '160w')}}"  alt="{{image.alt}}" title="{{image.alt}}"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
@@ -102,34 +76,7 @@
                       <ul class="aa-product-catg aa-latest-slider">
                         <!-- start single product item -->
                         {{#each products.new}}
-                        <li class="card
-                        {{#if alternate}} card--alternate{{/if}}"
-                        data-test="card-{{id}}"
-                        {{#if settings.data_tag_enabled}}
-                            data-event-type="{{event}}"
-                            data-entity-id="{{id}}"
-                            data-position="{{position}}"
-                            data-name="{{name}}"
-                            data-product-category="
-                            {{#each category}}
-                                {{#if @last}}
-                                    {{this}}
-                                {{else}}
-                                    {{this}},
-                                {{/if}}
-                            {{/each}}"
-                            data-product-brand="{{brand.name}}"
-                            data-product-price="
-                            {{#or customer (unless settings.hide_price_from_guests)}}
-                                {{#if price.with_tax}}
-                                    {{price.with_tax.value}}
-                                {{else}}
-                                    {{price.without_tax.value}}
-                                {{/if}}
-                            {{else}}
-                                {{lang 'common.login_for_pricing'}}
-                            {{/or}}"
-                        {{/if}}>
+                        <li >
                           <figure>
                             <a class="aa-product-img" href="#"><img src="{{getImageSrcset image 1x=(default fallback_size '160w')}}" alt="{{image.alt}}" title="{{image.alt}}"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
