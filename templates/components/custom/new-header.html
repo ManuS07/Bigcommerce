@@ -79,11 +79,40 @@
                   <!-- / header top left -->
                   <div class="aa-header-top-right">
                     <ul class="aa-head-top-nav-right">
-                      <li><a href="account.html">My Account</a></li>
+                     
                       <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
-                      <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
                       <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                      <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                      <li>
+                      {{#if customer}}
+                      <a 
+                         href="{{urls.account.index}}"
+                         aria-label="{{lang 'common.account'}}"
+                      >
+                          {{lang 'common.account'}}
+                      </a>
+                      <a 
+                         href="{{urls.auth.logout}}"
+                         aria-label="{{lang 'common.logout'}}"
+                      >
+                          {{lang 'common.logout'}}
+                      </a>
+                  {{else}}
+                      <a 
+                         href="{{urls.auth.login}}"
+                         aria-label="{{lang 'common.login'}}"
+                      >
+                          {{lang 'common.login'}}
+                      </a>
+                      {{#if settings.account_creation_enabled}}
+                          <a 
+                             href="{{urls.auth.create_account}}"
+                             aria-label="{{lang 'common.sign_up'}}"
+                          >
+                              {{lang 'common.sign_up'}}
+                          </a>
+                      {{/if}}
+                  {{/if}}
+                  </li>
                     </ul>
                   </div>
                 </div>
@@ -107,7 +136,7 @@
                       <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                     </a> -->
                     <!-- img based logo -->
-                    <a href="index.html"><img src="../../../../assets/custom/img/logo.jpg" alt="logo img"></a>
+                    <a href="{{urls.home}}"><img src="../../../../assets/custom/img/logo.jpg" alt="logo img"></a>
                   </div>
                   <!-- / logo  -->
                    <!-- cart box -->
@@ -124,7 +153,7 @@
                           <span class="aa-cart-notify countPill cart-quantity"></span>
                       </a>
           
-                      <div  class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+                      <div class="aa-cartbox-summary" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
                 
                     <!-- <a class="navUser-action"
                     data-cart-preview
@@ -156,25 +185,26 @@
       </header>
 
       {{> components/common/navigation-menu}}
-               <!-- jQuery library -->
-               <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-               <!-- Include all compiled plugins (below), or include individual files as needed -->
-               <script src="{{cdn 'assets/custom/js/bootstrap.js'}}"></script>
-               <!-- SmartMenus jQuery plugin -->
-               <script type="text/javascript" src="{{cdn 'assets/custom/js/jquery.smartmenus.js'}}"></script>
-               <!-- SmartMenus jQuery Bootstrap Addon -->
-               <script type="text/javascript" src="{{cdn 'assets/custom/js/jquery.smartmenus.bootstrap.js'}}"></script>
-               <!-- To Slider JS -->
-               <script src="{{cdn 'assets/custom/js/sequence.js'}}"></script>
-               <script src="{{cdn 'assets/custom/js/sequence-theme.modern-slide-in.js'}}"></script>
-               <!-- Product view slider -->
-               <script type="text/javascript" src="{{cdn 'assets/custom/js/jquery.simpleGallery.js'}}"></script>
-               <script type="text/javascript" src="{{cdn 'assets/custom/js/jquery.simpleLens.js'}}"></script>
-               <!-- slick slider -->
-               <script type="text/javascript" src="{{cdn 'assets/custom/js/slick.js'}}"></script>
-               <!-- Price picker slider -->
-               <script type="text/javascript" src="{{cdn 'assets/custom/js/nouislider.js'}}"></script>
-               <!-- Custom js -->
-               <script src="{{cdn 'assets/custom/js/custom.js'}}"></script>
+                <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../../../assets/custom/js/bootstrap.js"></script>  
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="../../../assets/custom/js/jquery.smartmenus.js"></script>
+  <!-- SmartMenus jQuery Bootstrap Addon -->
+  <script type="text/javascript" src="../../../assets/custom/js/jquery.smartmenus.bootstrap.js"></script>  
+  <!-- To Slider JS -->
+  <script src="../../../assets/custom/js/sequence.js"></script>
+  <script src="../../../assets/custom/js/sequence-theme.modern-slide-in.js"></script>  
+  <!-- Product view slider -->
+  <script type="text/javascript" src="../../../assets/custom/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="../../../assets/custom/js/jquery.simpleLens.js"></script>
+  <!-- slick slider -->
+  <script type="text/javascript" src="../../../assets/custom/js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="../../../assets/custom/js/nouislider.js"></script>
+  <!-- Custom js -->
+  <script src="../../../assets/custom/js/custom.js"></script> 
+
 </body>
 </html>
