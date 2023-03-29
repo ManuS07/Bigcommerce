@@ -1380,10 +1380,6 @@ img {
   text-align: center;
 }
 
-.slick-arrow {
-  height: 30px;
-  width: 30px;
-}
 
 /*==================
  SUPPORT SECTION
@@ -3195,7 +3191,6 @@ img {
 ====================*/
 
 #aa-contact {
-  background: #ccc none repeat scroll 0 0;
   display: inline;
   float: left;
   width: 100%;

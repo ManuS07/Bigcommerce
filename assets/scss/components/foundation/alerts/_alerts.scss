@@ -3,6 +3,7 @@
 // =============================================================================
 
 .alertBox {
+ 
     border-radius: $alert-radius;
     color: stencilColor("alert-color");
 }
@@ -14,12 +15,22 @@
 }
 
 .alertBox--info {
-    background-color: stencilColor("banner--deafault-backgroundColor");
-    color: stencilColor("alert-color-alt");
+    background-color: #ffdddd;
+    color: #ff6666;
 
     .alertBox-close {
         svg {
             fill: $color-infoLight;
         }
+    }
+    svg{
+        fill:#ff6666;
+    }
+}
+
+.alertBox--success{
+    background-color:#ffdddd;
+    svg{
+        fill:#ff6666;
     }
 }
